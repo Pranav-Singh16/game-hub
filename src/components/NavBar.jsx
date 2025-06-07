@@ -1,3 +1,6 @@
+// import { SwitchLabel } from "./toggleSwitch";
+import ThemeToggle from "./toggleSwitch";
+
 function NavBar() {
   return (
     <div className="flex items-center">
@@ -8,8 +11,9 @@ function NavBar() {
           className="w-5 sm:w-5 md:w-10" // Adjust size as needed
         />
       </div>
+      <ThemeToggle />
 
-      <div>Nav</div>
+      {/* <SwitchLabel /> */}
     </div>
   );
 }
