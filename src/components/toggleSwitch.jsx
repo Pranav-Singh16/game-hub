@@ -22,15 +22,22 @@ export default function ThemeToggle() {
             onChange={(e) => setIsDarkMode(e.target.checked)}
             className="opacity-0 w-0 h-0"
           />
-          <span className="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-400 dark:bg-gray-600 rounded-full transition"></span>
           <span
-            className={`absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition transform ${
+            className={`absolute cursor-pointer top-0 left-0 right-0 bottom-0 rounded-full transition 
+                        ${
+                          isDark
+                            ? "bg-green-100"
+                            : "bg-gray-400 dark:bg-gray-600"
+                        }`}
+          ></span>
+          <span
+            className={`absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition transform dark: bg-green-400 ${
               isDark ? "translate-x-6" : ""
             }`}
           ></span>
         </label>
       </div>
-      <div>{isDark ? "Dark" : "Light"}</div>
+      <div>{isDark ? "Dark " : "Light "} Mode</div>
     </div>
   );
 }

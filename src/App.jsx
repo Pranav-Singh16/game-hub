@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./components/NavBar";
 import { useRecoilValue } from "recoil";
 import { isDarkMode, newWorkSelector } from "./recoil";
+import GameGrid from "./components/GameGrid";
 
 function App() {
   const dark = useRecoilValue(isDarkMode);
@@ -11,10 +12,11 @@ function App() {
       <div className="hidden lg:block">
         <Navbar />
         <div className="flex">
-          <div className="bg-yellow-400 dark:bg-black text-white w-1/2 p-4">
+          <div className="bg-yellow-400 dark:bg-purple-500 text-white w-1/2 p-4">
             Aside
           </div>
           <div className="bg-blue-400 w-1/2 p-4">Main</div>
+          <GameGrid />
         </div>
       </div>
 
