@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import { isDarkMode } from "../recoil/index";
 
 export default function ThemeToggle() {
-  // const [isDark, setIsDark] = useState(false);
   const [isDark, setIsDarkMode] = useRecoilState(isDarkMode);
   useEffect(() => {
     if (isDark) {
@@ -14,65 +13,24 @@ export default function ThemeToggle() {
   }, [isDark]);
 
   return (
-    <div className="flex items-center gap-2 p-4">
-      <label className="relative inline-block w-12 h-6">
-        <input
-          type="checkbox"
-          checked={isDark}
-          onChange={(e) => setIsDarkMode(e.target.checked)}
-          className="opacity-0 w-0 h-0"
-        />
-        <span className="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-400 dark:bg-gray-600 rounded-full transition"></span>
-        <span
-          className={`absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition transform ${
-            isDark ? "translate-x-6" : ""
-          }`}
-        ></span>
-      </label>
+    <div className="flex items-center">
+      <div className="flex items-center gap-2 p-4">
+        <label className="relative inline-block w-12 h-6">
+          <input
+            type="checkbox"
+            checked={isDark}
+            onChange={(e) => setIsDarkMode(e.target.checked)}
+            className="opacity-0 w-0 h-0"
+          />
+          <span className="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-400 dark:bg-gray-600 rounded-full transition"></span>
+          <span
+            className={`absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition transform ${
+              isDark ? "translate-x-6" : ""
+            }`}
+          ></span>
+        </label>
+      </div>
+      <div>{isDark ? "Dark" : "Light"}</div>
     </div>
   );
-
-  // // useEffect(() => {
-  // //   const stored = localStorage.getItem("theme");
-  // //   const prefersDark = window.matchMedia(
-  // //     "(prefers-color-scheme: dark)"
-  // //   ).matches;
-
-  // //   const enableDark = stored === "dark" || (!stored && prefersDark);
-  // //   setIsDark(enableDark);
-  // //   document.documentElement.classList.toggle("dark", enableDark);
-  // // }, []);
-
-  // const toggleTheme = () => {
-  //   const newTheme = !isDark;
-  //   setIsDark(newTheme);
-  //   localStorage.setItem("theme", newTheme ? "dark" : "light");
-  //   document.documentElement.classList.toggle("dark", newTheme);
-  // };
-
-  // // useEffect(() => {
-  // //   console.log(setIsDarkMode);
-  // // });
-
-  // return (
-  //   <div className="flex items-center gap-2 p-4">
-  //     {/* <span className="text-xl">🌞</span> */}
-  //     <label className="relative inline-block w-12 h-6">
-  //       <input
-  //         type="checkbox"
-  //         checked={isDark}
-  //         // onChange={toggleTheme}
-  //         onChange={() => setIsDarkMode(!isDarkMode)}
-  //         className="opacity-0 w-0 h-0"
-  //       />
-  //       <span className="absolute cursor-pointer top-0 left-0 right-0 bottom-0 bg-gray-400 dark:bg-gray-600 rounded-full transition"></span>
-  //       <span
-  //         className={`absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition transform ${
-  //           isDark ? "translate-x-6" : ""
-  //         }`}
-  //       ></span>
-  //     </label>
-  //     {/* <span className="text-xl">🌙</span> */}
-  //   </div>
-  // );
 }
