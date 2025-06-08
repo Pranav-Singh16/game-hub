@@ -12,19 +12,19 @@ export const isDarkMode = atom({
   default: false,
 });
 
-export const games = selector({
-  key: "games",
-  get: async () => {
-    try {
-      const res = await apiClients.get("/xgames");
-      return res.data.results;
-    } catch (err) {
-      throw new Error(
-        err.response?.data?.message || err.message || "Failed to fetch games"
-      );
-    }
-  },
-});
+// export const games = selector({
+//   key: "games",
+//   get: async () => {
+//     try {
+//       const res = await apiClients.get("/xgames");
+//       return res.data.results;
+//     } catch (err) {
+//       throw new Error(
+//         err.response?.data?.message || err.message || "Failed to fetch games"
+//       );
+//     }
+//   },
+// });
 
 // Selector for async data
 export const newWorkSelector = selector({

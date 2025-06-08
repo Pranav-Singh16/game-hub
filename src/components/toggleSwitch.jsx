@@ -31,8 +31,8 @@ export default function ThemeToggle() {
                         }`}
           ></span>
           <span
-            className={`absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition transform dark: bg-green-400 ${
-              isDark ? "translate-x-6" : ""
+            className={`absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition transform ${
+              isDark ? "translate-x-6 dark:bg-gray-400" : "dark:bg-red-400"
             }`}
           ></span>
         </label>
