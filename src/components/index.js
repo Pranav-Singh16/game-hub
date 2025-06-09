@@ -6,3 +6,4 @@ export { default as BlackBox } from "./BlackBox";
 export { default as PlatformIcons } from "./PlatformIcons";
 export { default as Devices } from "./Devices";
 export { default as CriticScore } from "./CriticScore"; // Capitalized to match import
+export { default as SkeletonCard } from "./SkeletonCard";
