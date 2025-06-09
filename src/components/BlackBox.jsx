@@ -17,7 +17,7 @@ function BlackBox({ img, icons, name, devices } = props) {
 
       {/* Text Bottom */}
       <div className="bg-white dark:bg-black text-black dark:text-white p-4 space-y-1">
-        <div className="font-semibold text-lg">
+        <div>
           <Devices devices={devices} />
         </div>
         <div>{name}</div>
