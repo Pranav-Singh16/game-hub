@@ -40,6 +40,7 @@ const Landing = () => {
             img={result.background_image}
             name={result.name}
             devices={result.parent_platforms}
+            score={result.metacritic}
           />
         ))}
       </div>

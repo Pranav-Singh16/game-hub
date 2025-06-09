@@ -1,9 +1,10 @@
 import { useRecoilValue } from "recoil";
 import { isDarkMode } from "../recoil/index";
-import { Devices } from "./index";
+import { Devices, CriticScore } from "./index";
 
-function BlackBox({ img, icons, name, devices } = props) {
+function BlackBox({ img, name, devices, score } = props) {
   const dark = useRecoilValue(isDarkMode);
+  console.log(score);
   return (
     <div className="w-80 rounded-lg overflow-hidden shadow-md">
       {/* Image Top */}
@@ -21,7 +22,9 @@ function BlackBox({ img, icons, name, devices } = props) {
           <Devices devices={devices} />
         </div>
         <div>{name}</div>
-        <div className="text-sm text-gray-400">Review</div>
+        <div className="text-sm text-gray-400">
+          <CriticScore score={score} />
+        </div>
       </div>
     </div>
   );
