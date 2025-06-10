@@ -7,3 +7,4 @@ export { default as PlatformIcons } from "./PlatformIcons";
 export { default as Devices } from "./Devices";
 export { default as CriticScore } from "./CriticScore"; // Capitalized to match import
 export { default as SkeletonCard } from "./SkeletonCard";
+export { default as FetchingGenres } from "./FetchingGenres";

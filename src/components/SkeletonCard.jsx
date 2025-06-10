@@ -1,35 +1,3 @@
-// const SkeletonCard = () => {
-//   return (
-//     <div className="w-80 rounded-lg overflow-hidden shadow-md">
-//       <div className="h-[200px] bg-gray-300 animate-pulse" />
-
-//       <div className="p-4 space-y-2">
-//         <div className="h-4 bg-gray-300 rounded w-1/2 animate-pulse" />
-//         <div className="h-4 bg-gray-300 rounded w-3/4 animate-pulse" />
-//         <div className="h-3 bg-gray-300 rounded w-1/4 animate-pulse" />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default SkeletonCard;
-
-// const SkeletonCard = () => {
-//   return (
-//     <div className="w-80 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-800">
-//       <div className="h-[200px] bg-gray-300 dark:bg-gray-700 animate-pulse" />
-
-//       <div className="p-4 space-y-2">
-//         <div className="h-4 bg-gray-300 dark:bg-gray-700 rounded w-1/2 animate-pulse" />
-//         <div className="h-4 bg-gray-300 dark:bg-gray-700 rounded w-3/4 animate-pulse" />
-//         <div className="h-3 bg-gray-300 dark:bg-gray-700 rounded w-1/4 animate-pulse" />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default SkeletonCard;
-
 const SkeletonCard = () => {
   const baseSkeleton = "animate-pulse rounded";
   const light = "bg-gray-300";
