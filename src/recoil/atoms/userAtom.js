@@ -9,7 +9,7 @@ export const newAtom = atom({
 
 export const isDarkMode = atom({
   key: "isDarkMode",
-  default: false,
+  default: true,
 });
 
 // export const games = selector({
