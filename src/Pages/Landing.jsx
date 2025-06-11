@@ -12,7 +12,8 @@ const Landing = () => {
     <div className="flex">
       {/* Left Sidebar: Sticky, full viewport height, and scrollable if its content overflows */}
       {/* If FetchingGenres itself has internal scrolling, it should be wrapped here */}
-      <div className="w-1/5 sticky top-0 h-screen overflow-y-auto">
+      <div className="w-1/5 sticky top-0 h-screen overflow-y-auto border-r border-gray-300 p-4 sidebar-scroll">
+        {/* bg-gray-100 dark:bg-[#161015] */}
         <FetchingGenres />
       </div>
 
