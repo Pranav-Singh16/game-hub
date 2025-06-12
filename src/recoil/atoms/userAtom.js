@@ -1,6 +1,6 @@
 import { atom, selector } from "recoil";
 import axios from "axios";
-import apiClients from "../../services/apiClients";
+import apiClients from "../../services/apiClient";
 
 export const newAtom = atom({
   key: "newAtom",

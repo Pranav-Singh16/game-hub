@@ -5,11 +5,11 @@ const baseUrl = import.meta.env.VITE_URL;
 
 // console.log(`apiKey: ${apiKey}, baseUrl: ${baseUrl}`);
 
-const apiClients = axios.create({
+const apiClient = axios.create({
   baseURL: baseUrl,
   params: {
     key: apiKey,
   },
 });
 
-export default apiClients;
+export default apiClient;
