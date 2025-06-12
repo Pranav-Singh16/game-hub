@@ -1,8 +1,7 @@
 import { useRecoilValueLoadable } from "recoil";
-// import { games } from "../recoil/index";
 
 const GameGrid = () => {
-  const gamesLoadable = useRecoilValueLoadable(games);
+  // const gamesLoadable = useRecoilValueLoadable(games);
 
   if (gamesLoadable.state === "loading") {
     return <p>Loading...</p>;
