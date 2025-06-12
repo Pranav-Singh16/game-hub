@@ -726,5 +726,4 @@ const useGames = () => {
   return { data, isLoading: false, error: "" };
 };
 
-console.log(useGames());
 export default useGames;

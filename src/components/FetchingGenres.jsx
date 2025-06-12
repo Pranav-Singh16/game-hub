@@ -36,17 +36,23 @@ const FetchingGenres = () => {
       {genres.map((genre) => (
         <div
           className={`flex items-center justify-start p-2 gap-4 rounded-md mb-2 shadow-sm
-            ${dark ? "bg-gray-800 text-white" : "bg-gray-100 text-black"}`}
+            ${dark ? "bg-gray-800 text-white" : "bg-gray-100 text-black"} 
+            hover:${dark ? "bg-gray-700" : "bg-gray-200"} 
+            hover:scale-105 
+            transition-transform duration-300 ease-in-out
+            hover:shadow-lg`}
           key={genre.id || genre.name}
         >
           <div className="w-8 h-8 rounded-md overflow-hidden">
             <img
               src={genre.image_background}
               alt={`${genre.name} genre`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110"
             />
           </div>
-          <div className="text-sm font-medium">{genre.name}</div>
+          <button className="text-sm font-medium hover:text-indigo-500 transition-colors duration-200">
+            {genre.name}
+          </button>
         </div>
       ))}
     </div>
@@ -55,15 +61,15 @@ const FetchingGenres = () => {
 
 export default FetchingGenres;
 
-// import { useRecoilValueLoadable, useRecoilValue } from "recoil";
-// import {isDarkMode } from "../recoil/index";
-// import useGenres from "../hooks/useGenres"
+// import { useRecoilValue } from "recoil";
+// import { isDarkMode } from "../recoil/index";
+// import useGenres from "../hooks/useGenres";
 
 // const FetchingGenres = () => {
-//   const {genres} = useGenres();
+//   const { data: genres, error, isLoading } = useGenres();
 //   const dark = useRecoilValue(isDarkMode);
 
-//   if (genresLoadable.state === "loading") {
+//   if (isLoading) {
 //     return (
 //       <div className="flex justify-center items-center h-full p-4">
 //         <div
@@ -74,11 +80,11 @@ export default FetchingGenres;
 //     );
 //   }
 
-//   if (genresLoadable.state === "hasError") {
-//     return <div className="text-red-500 p-4">Failed to load genres.</div>;
+//   if (error) {
+//     return (
+//       <div className="text-red-500 p-4">Failed to load genres: {error}</div>
+//     );
 //   }
-
-//   const genres = genresLoadable.contents;
 
 //   if (!Array.isArray(genres) || genres.length === 0) {
 //     return (
@@ -103,7 +109,9 @@ export default FetchingGenres;
 //               className="w-full h-full object-cover"
 //             />
 //           </div>
-//           <div className="text-sm font-medium">{genre.name}</div>
+//           <button onH className="text-sm font-medium">
+//             {genre.name}
+//           </button>
 //         </div>
 //       ))}
 //     </div>

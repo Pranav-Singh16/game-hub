@@ -7,7 +7,7 @@ function NavBar() {
         <img
           src="/images/game.svg"
           alt="home logo"
-          className="w-5 sm:w-5 md:w-10 lg: w-8" // Adjust size as needed
+          className="w-5 sm:w-5 mx-8 md:w-10 lg: w-8 mx-7"
         />
       </div>
       <div className="pr-8">
