@@ -1,12 +1,14 @@
+import React, { memo } from "react";
 import { useRecoilValue } from "recoil";
 import { isDarkMode } from "../recoil/index";
 import { Devices, CriticScore } from "./index";
 
-function BlackBox({ img, name, devices, score } = props) {
+function BlackBox({ img, name, devices, score }) {
   const dark = useRecoilValue(isDarkMode);
+
+  console.log("in blackbox");
   return (
     <div className="w-80 rounded-lg overflow-hidden shadow-md">
-      {/* Image Top */}
       <div className="h-[200px]">
         <img
           src={img}
@@ -15,11 +17,8 @@ function BlackBox({ img, name, devices, score } = props) {
         />
       </div>
 
-      {/* Text Bottom */}
       <div className="bg-white dark:bg-black text-black dark:text-white p-4 space-y-1">
-        <div>
-          <Devices devices={devices} />
-        </div>
+        <Devices devices={devices} />
         <div>{name}</div>
         <div className="text-sm text-gray-400">
           <CriticScore score={score} />
@@ -29,4 +28,39 @@ function BlackBox({ img, name, devices, score } = props) {
   );
 }
 
-export default BlackBox;
+export default memo(BlackBox); // ✅ Memoized to prevent unnecessary re-renders
+
+// import { useRecoilValue } from "recoil";
+// import { isDarkMode } from "../recoil/index";
+// import { Devices, CriticScore } from "./index";
+
+// function BlackBox({ img, name, devices, score } = props) {
+//   const dark = useRecoilValue(isDarkMode);
+
+//   console.log("in blackbox");
+//   return (
+//     <div className="w-80 rounded-lg overflow-hidden shadow-md">
+//       {/* Image Top */}
+//       <div className="h-[200px]">
+//         <img
+//           src={img}
+//           alt="Box content"
+//           className="w-full h-full object-cover"
+//         />
+//       </div>
+
+//       {/* Text Bottom */}
+//       <div className="bg-white dark:bg-black text-black dark:text-white p-4 space-y-1">
+//         <div>
+//           <Devices devices={devices} />
+//         </div>
+//         <div>{name}</div>
+//         <div className="text-sm text-gray-400">
+//           <CriticScore score={score} />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default BlackBox;

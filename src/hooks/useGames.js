@@ -1,12 +1,15 @@
+import { useMemo } from "react";
 import useData from "./useData";
-import { useRecoilValue } from "recoil";
-import { selectedGenres } from "../recoil";
 
-const useGames = () => {
-  const selectedGenre = useRecoilValue(selectedGenres); // ✅ now called inside a hook
-  return useData("/games", { params: { genres: selectedGenre?.id } }, [
-    selectedGenre?.id,
-  ]);
+const useGames = (selectedGenre) => {
+  const requestConfig = useMemo(
+    () => ({
+      params: { genres: selectedGenre?.id },
+    }),
+    [selectedGenre?.id]
+  );
+
+  return useData("/games", requestConfig, [selectedGenre?.id]);
 };
 
 export default useGames;

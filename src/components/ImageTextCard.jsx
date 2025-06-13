@@ -1,4 +1,5 @@
 function ImageTextCard({ imageSrc, text }) {
+  console.log("Imagetextcard");
   return (
     <div className="flex flex-col items-center p-4 border rounded shadow max-w-xs">
       {/* Fixed-size Image */}

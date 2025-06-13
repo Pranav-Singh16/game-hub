@@ -1,6 +1,7 @@
 import ThemeToggle from "./toggleSwitch";
 
 function NavBar() {
+  console.log("navbar");
   return (
     <div className="flex items-center justify-between">
       <div>
