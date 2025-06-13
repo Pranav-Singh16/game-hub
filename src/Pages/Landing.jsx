@@ -2,11 +2,14 @@ import { useRecoilValue } from "recoil";
 import useGames from "../hooks/useGames"; // ✅ correct hook
 import { BlackBox, FetchingGenres, SkeletonCard } from "../components";
 import { isDarkMode } from "../recoil/index";
+import { selectedGenres } from "../recoil/index";
 
 const Landing = () => {
   const dark = useRecoilValue(isDarkMode);
-  const { data: games, error, isLoading } = useGames();
+  const selectedGenre = useRecoilValue(selectedGenres);
+  const { data: games, error, isLoading } = useGames(selectedGenre);
 
+  console.log("landing genre");
   return (
     <div className="flex">
       <div className="hidden sm:block w-1/5 sticky top-0 h-screen overflow-y-auto border-r border-gray-300 p-4 sidebar-scroll">
