@@ -12,40 +12,20 @@ const Landing = () => {
 
   console.log("landing genre");
   return (
-    <div className="flex">
+    // <div className="flex">
+    // <div className="flex flex-col sm:flex-row">
+    <div className="flex flex-col items-center sm:flex-row sm:items-start">
       <div className="hidden sm:block w-1/5 sticky top-0 h-screen overflow-y-auto border-r border-gray-300 p-4 sidebar-scroll">
         <FetchingGenres />
       </div>
 
-      {/* <div className="w-full sm:w-4/5 p-4 flex justify-center">
-        <PlatformSelector />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">
-          {isLoading ? (
-            Array.from({ length: 6 }).map((_, index) => (
-              <SkeletonCard key={index} />
-            ))
-          ) : error ? (
-            <div className="text-red-500">Failed to load games: {error}</div>
-          ) : (
-            games.map((game) => (
-              <BlackBox
-                key={game.id}
-                img={game.background_image}
-                name={game.name}
-                devices={game.parent_platforms}
-                score={game.metacritic}
-              />
-            ))
-          )}
-        </div>
-      </div> */}
-
-      <div className="w-full sm:w-4/5 p-4 mx-auto">
+      {/* <div className="w-full sm:w-4/5 p-4 mx-auto"> */}
+      {/* //one way to make center in mobile and laptop */}
+      <div className="grid grid-cols-1 gap-y-6 p-4 justify-items-center sm:justify-items-stretch ...">
         {/* Platform Selector Centered */}
         <div className="flex justify-start mb-4">
-          <PlatformSelector className="text-white" />
+          <PlatformSelector />
         </div>
-
         {/* Game Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">
           {isLoading ? (
