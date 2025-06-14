@@ -12,15 +12,11 @@ const Landing = () => {
 
   console.log("landing genre");
   return (
-    // <div className="flex">
-    // <div className="flex flex-col sm:flex-row">
     <div className="flex flex-col items-center sm:flex-row sm:items-start">
       <div className="hidden sm:block w-1/5 sticky top-0 h-screen overflow-y-auto border-r border-gray-300 p-4 sidebar-scroll">
         <FetchingGenres />
       </div>
 
-      {/* <div className="w-full sm:w-4/5 p-4 mx-auto"> */}
-      {/* //one way to make center in mobile and laptop */}
       <div className="grid grid-cols-1 gap-y-6 p-4 justify-items-center sm:justify-items-stretch ...">
         {/* Platform Selector Centered */}
         <div className="flex justify-start mb-4">
