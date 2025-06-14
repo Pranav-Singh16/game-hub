@@ -7,9 +7,6 @@ import { selectedGenres } from "../recoil/index";
 const FetchingGenres = () => {
   const { data: genres, error, isLoading } = useGenres();
   const dark = useRecoilValue(isDarkMode);
-
-  // State to track the selected genre
-  // const [selectedGenre, setSelectedGenre] = useState(null);
   const [selectedGenre, setSelectedGenre] = useRecoilState(selectedGenres);
 
   const handleGenreClick = (genre) => {

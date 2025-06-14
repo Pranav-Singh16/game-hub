@@ -1,5 +1,6 @@
 import { useRecoilValue } from "recoil";
-import useGames from "../hooks/useGames"; // ✅ correct hook
+import { useState } from "react";
+import useGames from "../hooks/useGames"; //  correct hook
 import { BlackBox, FetchingGenres, SkeletonCard } from "../components";
 import { isDarkMode } from "../recoil/index";
 import { selectedGenres } from "../recoil/index";
@@ -9,6 +10,7 @@ const Landing = () => {
   const dark = useRecoilValue(isDarkMode);
   const selectedGenre = useRecoilValue(selectedGenres);
   const { data: games, error, isLoading } = useGames(selectedGenre);
+  const [selectedPlatform, setSelectedPlatform] = useState(null);
 
   console.log("landing genre");
   return (
@@ -20,6 +22,7 @@ const Landing = () => {
       <div className="grid grid-cols-1 gap-y-6 p-4 justify-items-center sm:justify-items-stretch ...">
         {/* Platform Selector Centered */}
         <div className="flex justify-start mb-4">
+          {/* <PlatformSelector onSelectPlatform={(platform)=>{setSelectedPlatform(platform)}}/> */}
           <PlatformSelector />
         </div>
         {/* Game Grid */}
