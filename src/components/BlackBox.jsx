@@ -6,7 +6,7 @@ import { Devices, CriticScore } from "./index";
 function BlackBox({ img, name, devices, score }) {
   const dark = useRecoilValue(isDarkMode);
 
-  console.log("in blackbox");
+  // console.log("in blackbox");
   return (
     <div className="w-80 rounded-lg overflow-hidden shadow-md">
       <div className="h-[200px]">

@@ -8,10 +8,10 @@ import useData from "./useData";
 // const isLoading = false;
 
 const usePlatforms = () => {
-  console.log("usePlatforms hook is being called!"); // Log this to see if the hook is invoked
+  // console.log("usePlatforms hook is being called!"); // Log this to see if the hook is invoked
   const { data, error, isLoading } = useData("platforms/lists/parents");
-  console.log("usePlatforms - Data:", data); // Log the fetched data here
-  console.log("usePlatforms - Error:", error); // Log any errors here
+  // console.log("usePlatforms - Data:", data); // Log the fetched data here
+  // console.log("usePlatforms - Error:", error); // Log any errors here
   return { platforms: data, error, isLoading }; // Make sure you return the correct data
 };
 export default usePlatforms;

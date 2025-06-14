@@ -9,10 +9,15 @@ import PlatformSelector from "../components/PlatformSelector";
 const Landing = () => {
   const dark = useRecoilValue(isDarkMode);
   const selectedGenre = useRecoilValue(selectedGenres);
-  const { data: games, error, isLoading } = useGames(selectedGenre);
   const [selectedPlatform, setSelectedPlatform] = useState(null);
+  const {
+    data: games,
+    error,
+    isLoading,
+  } = useGames(selectedGenre, selectedPlatform); //adding selectedPlatform
+  console.log("platform", selectedPlatform);
 
-  console.log("landing genre");
+  // console.log("landing genre");
   return (
     <div className="flex flex-col items-center sm:flex-row sm:items-start">
       <div className="hidden sm:block w-1/5 sticky top-0 h-screen overflow-y-auto border-r border-gray-300 p-4 sidebar-scroll">
@@ -22,8 +27,12 @@ const Landing = () => {
       <div className="grid grid-cols-1 gap-y-6 p-4 justify-items-center sm:justify-items-stretch ...">
         {/* Platform Selector Centered */}
         <div className="flex justify-start mb-4">
-          {/* <PlatformSelector onSelectPlatform={(platform)=>{setSelectedPlatform(platform)}}/> */}
-          <PlatformSelector />
+          <PlatformSelector
+            onSelectPlatform={(platform) => {
+              setSelectedPlatform(platform);
+            }}
+          />
+          {/* <PlatformSelector /> */}
         </div>
         {/* Game Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">

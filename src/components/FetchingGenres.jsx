@@ -58,7 +58,7 @@ const FetchingGenres = () => {
                 ? `${
                     dark
                       ? "bg-gray-600 border-2 border-purple-500"
-                      : "bg-gray-200 border-2 border-indigo-500"
+                      : "bg-slate-200 border-2 border-indigo-500"
                   } scale-110`
                 : ""
             }`}
