@@ -1,6 +1,7 @@
 import useData from "./useData";
 
 const useGenres = () => useData("/genres");
+export default useGenres;
 
 // const data = [
 //   {
@@ -881,4 +882,3 @@ const useGenres = () => useData("/genres");
 // const useGenres = () => {
 //   return { data, isLoading: false, error: "" };
 // };
-export default useGenres;

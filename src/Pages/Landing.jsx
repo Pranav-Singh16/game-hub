@@ -3,6 +3,7 @@ import useGames from "../hooks/useGames"; // ✅ correct hook
 import { BlackBox, FetchingGenres, SkeletonCard } from "../components";
 import { isDarkMode } from "../recoil/index";
 import { selectedGenres } from "../recoil/index";
+import PlatformSelector from "../components/PlatformSelector";
 
 const Landing = () => {
   const dark = useRecoilValue(isDarkMode);
@@ -16,7 +17,36 @@ const Landing = () => {
         <FetchingGenres />
       </div>
 
-      <div className="w-full sm:w-4/5 p-4 flex justify-center">
+      {/* <div className="w-full sm:w-4/5 p-4 flex justify-center">
+        <PlatformSelector />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">
+          {isLoading ? (
+            Array.from({ length: 6 }).map((_, index) => (
+              <SkeletonCard key={index} />
+            ))
+          ) : error ? (
+            <div className="text-red-500">Failed to load games: {error}</div>
+          ) : (
+            games.map((game) => (
+              <BlackBox
+                key={game.id}
+                img={game.background_image}
+                name={game.name}
+                devices={game.parent_platforms}
+                score={game.metacritic}
+              />
+            ))
+          )}
+        </div>
+      </div> */}
+
+      <div className="w-full sm:w-4/5 p-4 mx-auto">
+        {/* Platform Selector Centered */}
+        <div className="flex justify-start mb-4">
+          <PlatformSelector className="text-white" />
+        </div>
+
+        {/* Game Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">
           {isLoading ? (
             Array.from({ length: 6 }).map((_, index) => (
