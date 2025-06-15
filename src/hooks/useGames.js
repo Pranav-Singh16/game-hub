@@ -1,21 +1,43 @@
 import { useMemo } from "react";
 import useData from "./useData";
 
-const useGames = (selectedGenre, selectedPlatform) => {
+const useGames = (query) => {
   const requestConfig = useMemo(
     () => ({
-      params: { genres: selectedGenre?.id, platforms: selectedPlatform?.id }, // Added platform
+      params: {
+        genres: query.genre?.id,
+        platforms: query.platform?.id,
+      },
     }),
-    [selectedGenre?.id, selectedPlatform?.id] // Now this also depends on selectedPlatform
+    [query.genre?.id, query.platform?.id]
   );
 
   return useData("/games", requestConfig, [
-    selectedGenre?.id,
-    selectedPlatform?.id,
-  ]); // Add selectedPlatform here too
+    query.genre?.id,
+    query.platform?.id,
+  ]);
 };
 
 export default useGames;
+
+// import { useMemo } from "react";
+// import useData from "./useData";
+
+// const useGames = (selectedGenre, selectedPlatform) => {
+//   const requestConfig = useMemo(
+//     () => ({
+//       params: { genres: selectedGenre?.id, platforms: selectedPlatform?.id }, // Added platform
+//     }),
+//     [selectedGenre?.id, selectedPlatform?.id] // Now this also depends on selectedPlatform
+//   );
+
+//   return useData("/games", requestConfig, [
+//     selectedGenre?.id,
+//     selectedPlatform?.id,
+//   ]); // Add selectedPlatform here too
+// };
+
+// export default useGames;
 
 // import { useMemo } from "react";
 // import useData from "./useData";
