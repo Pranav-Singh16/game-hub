@@ -18,11 +18,11 @@ function BlackBox({ img, name, devices, score }) {
       </div>
 
       <div className="bg-white dark:bg-black text-black dark:text-white p-4 space-y-1">
-        <Devices devices={devices} />
-        <div>{name}</div>
-        <div className="text-sm text-gray-400">
-          <CriticScore score={score} />
+        <div className="flex justify-between">
+          <Devices devices={devices} />
+          <CriticScore score={score} className="text-sm text-gray-400" />
         </div>
+        <div>{name}</div>
       </div>
     </div>
   );
