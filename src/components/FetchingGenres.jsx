@@ -52,7 +52,7 @@ const FetchingGenres = () => {
           className={`flex items-center justify-start p-2 gap-4 rounded-md mb-2 shadow-sm
             ${dark ? "bg-gray-800 text-white" : "bg-gray-100 text-black"} 
             transition-transform duration-300 ease-in-out
-            hover:scale-105 hover:shadow-lg
+            hover:scale-110 hover:shadow-lg
             ${
               selectedGenre === genre.id
                 ? `${
