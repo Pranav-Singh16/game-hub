@@ -17,6 +17,7 @@ const GameGrid = ({ games, error, isLoading }) => {
             name={game.name}
             devices={game.parent_platforms}
             score={game.metacritic}
+            rating={game.rating_top}
           />
         ))
       )}

@@ -9,3 +9,4 @@ export { default as FetchingGenres } from "./FetchingGenres";
 export { default as GameGrid } from "./GameGrid";
 export { default as SearchInput } from "./SearchInput";
 export { default as GameHeading } from "./GameHeading";
+export { default as Emoji } from "./Emoji";

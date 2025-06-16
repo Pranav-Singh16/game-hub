@@ -3,8 +3,9 @@ import { useRecoilValue } from "recoil";
 import { isDarkMode } from "../recoil/index";
 import { Devices, CriticScore } from "./index";
 import noImage from "../assets/images/noImage.svg";
+import { Emoji } from "./index";
 
-function BlackBox({ img, name, devices, score }) {
+function BlackBox({ img, name, devices, score, rating }) {
   const dark = useRecoilValue(isDarkMode);
 
   // console.log("in blackbox");
@@ -24,6 +25,7 @@ function BlackBox({ img, name, devices, score }) {
           <CriticScore score={score} className="text-sm text-gray-400" />
         </div>
         <div>{name}</div>
+        <Emoji rating={rating} className="ml-0" />
       </div>
     </div>
   );
