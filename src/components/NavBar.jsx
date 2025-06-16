@@ -7,23 +7,25 @@ function NavBar() {
     <div className="flex items-center justify-between w-full px-4 py-2">
       <div className="flex items-center w-full">
         {/* Logo */}
-        <img
-          src="/images/game.svg"
-          alt="home logo"
-          className="w-[15%] sm:w-[5%] max-w-[80px] mx-4" // On mobile (default) logo takes 20% width, on larger screens 10%
-        />
+        <Link to="/" className="w-[15%] sm:w-[5%] max-w-[80px] mx-2 lg:mx-4">
+          <img
+            src="/images/game.svg"
+            alt="home logo"
+            className="w-full" // Make sure image takes full width of the Link container
+          />
+        </Link>
         {/* Search Input */}
-        <div className="flex-grow mx-4">
+        <div className="flex-grow  mx-2 lg:mx-4">
           <SearchInput />
         </div>
       </div>
       {/* About Link (Hidden on mobile) */}
-      <Link to="/about" className="hidden sm:block mr-4">
+      <Link to="/about" className="hidden sm:block">
         About
       </Link>{" "}
       {/* This hides the About link on mobile */}
       {/* Theme Toggle */}
-      <div className="ml-4">
+      <div>
         <ThemeToggle />
       </div>
     </div>

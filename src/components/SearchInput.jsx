@@ -8,14 +8,14 @@ const SearchInput = () => {
     <div className="flex">
       <input
         name="myInput"
-        defaultValue={"Search Games..."}
+        placeholder={"Search Games..."}
         className={`
           w-[100%] // Make the input take up the remaining space
           px-4 py-2
           border rounded-md
           ${
             darkMode
-              ? "bg-gray-800 text-white border-gray-600"
+              ? "bg-zinc-800 text-white border-zinc-600"
               : "bg-white text-black border-gray-300"
           }
           focus:outline-none focus:outline-none focus:ring-0
