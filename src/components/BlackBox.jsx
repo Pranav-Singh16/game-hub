@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import { useRecoilValue } from "recoil";
 import { isDarkMode } from "../recoil/index";
 import { Devices, CriticScore } from "./index";
+import noImage from "../assets/images/noImage.svg";
 
 function BlackBox({ img, name, devices, score }) {
   const dark = useRecoilValue(isDarkMode);
@@ -11,7 +12,7 @@ function BlackBox({ img, name, devices, score }) {
     <div className="w-80 rounded-lg overflow-hidden shadow-md">
       <div className="h-[200px]">
         <img
-          src={img}
+          src={img || noImage} // Use fallback if img is null/undefined/empty
           alt="Box content"
           className="w-full h-full object-cover"
         />
