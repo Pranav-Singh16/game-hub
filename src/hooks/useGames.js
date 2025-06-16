@@ -8,9 +8,11 @@ const useGames = (query) => {
         genres: query.genre?.id,
         platforms: query.platform?.id,
         ordering: query.sortOrder,
+        search: query.searchText,
       },
     }),
-    [query.genre?.id, query.platform?.id, query.sortOrder] // ← FIXED
+    // [query.genre?.id, query.platform?.id, query.sortOrder, query.searchText] // ← FIXED
+    [JSON.stringify(query)]
   );
 
   return useData("/games", requestConfig, [requestConfig]); // Optional: use requestConfig as dep

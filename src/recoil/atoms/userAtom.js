@@ -5,7 +5,7 @@ export const isDarkMode = atom({
   default: true,
 });
 
-export const selectedGenres = atom({
-  key: "selectedGenres",
-  default: null,
+export const gameQuerys = atom({
+  key: "gameQuerys",
+  default: {},
 });

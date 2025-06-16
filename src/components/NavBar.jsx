@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import SearchInput from "./SearchInput";
 import ThemeToggle from "./toggleSwitch";
 
-function NavBar() {
+function NavBar({ onSearch }) {
   return (
     <div className="flex items-center justify-between w-full px-4 py-2">
       <div className="flex items-center w-full">
@@ -16,7 +16,7 @@ function NavBar() {
         </Link>
         {/* Search Input */}
         <div className="flex-grow  mx-2 lg:mx-4">
-          <SearchInput />
+          <SearchInput onSearch={onSearch} />
         </div>
       </div>
       {/* About Link (Hidden on mobile) */}
