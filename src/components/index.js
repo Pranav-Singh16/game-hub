@@ -7,3 +7,4 @@ export { default as CriticScore } from "./CriticScore"; // Capitalized to match 
 export { default as SkeletonCard } from "./SkeletonCard";
 export { default as FetchingGenres } from "./FetchingGenres";
 export { default as GameGrid } from "./GameGrid";
+export { default as SearchInput } from "./SearchInput";

@@ -22,15 +22,15 @@ const Landing = () => {
 
       <div className="grid grid-cols-1 gap-y-6 p-4 justify-items-center sm:justify-items-stretch">
         <div className="flex justify-start mb-4 gap-4">
-          <PlatformSelector
-            onSelectPlatform={(platform) =>
-              setGameQuery((prev) => ({ ...prev, platform }))
-            }
-          />
           <SortSelector
             sortOrder={gameQuery.sortOrder}
             onSelectSortOrder={(sortOrder) =>
               setGameQuery({ ...gameQuery, sortOrder })
+            }
+          />
+          <PlatformSelector
+            onSelectPlatform={(platform) =>
+              setGameQuery((prev) => ({ ...prev, platform }))
             }
           />
         </div>

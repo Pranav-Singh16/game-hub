@@ -26,7 +26,7 @@ const SortSelector = ({ sortOrder, onSelectSortOrder }) => {
     sortOrders.find((order) => order.value === sortOrder)?.label || "Relevance";
 
   return (
-    <div className="relative w-50">
+    <div className="w-49 md:w-50">
       <div
         className={`flex justify-between items-center px-4 py-2 border rounded-md cursor-pointer ${
           dark
