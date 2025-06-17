@@ -11,7 +11,7 @@ const Emoji = ({ rating }) => {
     5: { src: bullsEye, alt: "exceptional" },
   };
 
-  const emoji = emojiMap[rating]; // ✅ Fix: define the emoji
+  const emoji = emojiMap[rating]; // define the emoji
 
   return (
     <img src={emoji.src} alt={emoji.alt} className="w-6 h-6 inline-block" />

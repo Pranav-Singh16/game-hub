@@ -10,16 +10,7 @@ const GameGrid = ({ games, error, isLoading }) => {
       ) : error ? (
         <div className="text-red-500">Failed to load games: {error}</div>
       ) : (
-        games.map((game) => (
-          <BlackBox
-            key={game.id}
-            img={game.background_image}
-            name={game.name}
-            devices={game.parent_platforms}
-            score={game.metacritic}
-            rating={game.rating_top}
-          />
-        ))
+        games.map((game, index) => <BlackBox key={index} game={game} />)
       )}
     </div>
   );

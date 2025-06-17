@@ -20,7 +20,12 @@ function NavBar({ onSearch }) {
         </div>
       </div>
       {/* About Link (Hidden on mobile) */}
-      <Link to="/about" className="hidden sm:block">
+      <Link
+        to="/about"
+        className="hidden sm:block px-3 py-1 rounded-md transition 
+             text-gray-800 hover:bg-blue-100 hover:text-blue-700
+             dark:text-gray-200 dark:hover:bg-zinc-700 dark:hover:text-white"
+      >
         About
       </Link>{" "}
       {/* This hides the About link on mobile */}
