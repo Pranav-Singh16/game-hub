@@ -8,10 +8,15 @@ function NavBar({ onSearch }) {
       <div className="flex items-center w-full">
         {/* Logo */}
         <Link to="/" className="w-[15%] sm:w-[5%] max-w-[80px] mx-2 lg:mx-4">
-          <img
-            src="/images/game.svg"
+          {/* <img
+            src="/game.svg" // NO relative path, starts from root
             alt="home logo"
-            className="w-full" // Make sure image takes full width of the Link container
+            className="w-full"
+          /> */}
+          <img
+            src={`${import.meta.env.BASE_URL}game.svg`}
+            alt="home logo"
+            className="w-full"
           />
         </Link>
         {/* Search Input */}
