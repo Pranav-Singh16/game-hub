@@ -35,10 +35,10 @@ Game Hub is a responsive and feature-rich **frontend web application** for disco
 ## 📸 Screenshots
 
 ### 🌞 Light Mode
-![Light Mode](./public/light.png)
+![Light Mode](./public/light.PNG)
 
 ### 🌙 Dark Mode
-![Dark Mode](./public/dark.png)
+![Dark Mode](./public/dark.PNG)
 
 ---
 
