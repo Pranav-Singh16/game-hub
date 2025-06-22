@@ -1,12 +1,55 @@
-# React + Vite
+# 🎮 Game Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 **Live Demo:** [Game Hub on GitHub Pages](https://pranav-singh16.github.io/game-hub/)
 
-Currently, two official plugins are available:
+Game Hub is a responsive and feature-rich **frontend web application** for discovering and exploring video games. Built with **React**, **Recoil**, and **Tailwind CSS**, and powered by the [RAWG Video Games Database API](https://rawg.io/apidocs), this app allows users to search, filter, and sort games seamlessly. It also includes support for both **dark and light modes** and works across **mobile, tablet, and desktop** screens.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔍 Search games by name  
+- 🎮 Filter games by platform (PC, PlayStation, Xbox, etc.)  
+- 🧩 Browse games by genre (Action, RPG, Adventure, etc.)  
+- 🔠 Sort games by name, popularity, or release date  
+- 🌗 Toggle between dark and light modes  
+- 📱 Fully responsive design for all devices  
+
+---
+
+## 🌐 Live Demo
+
+👉 [Click here to view the live site](https://pranav-singh16.github.io/game-hub/)
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** – Component-based frontend library  
+- **Recoil** – State management  
+- **Tailwind CSS** – Utility-first CSS framework  
+- **RAWG API** – Video game data provider  
+
+---
+
+## 📸 Screenshots
+
+> *(Add screenshots here if available)*  
+> Example:  
+> ![Game Hub Light Mode](./screenshots/light-mode.png)  
+> ![Game Hub Dark Mode](./screenshots/dark-mode.png)
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Pranav-Singh16/game-hub.git
+cd game-hub
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
